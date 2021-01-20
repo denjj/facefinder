@@ -1,0 +1,52 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Facefinder
+# dependencies
+/facefinder/node_modules
+/facefinder/.pnp
+/facefinder/.pnp.js
+
+# testing
+/facefinder/coverage
+
+# production
+/facefinder/build
+
+# misc
+/facefinder/.DS_Store
+/facefinder/.env.local
+/facefinder/.env.development.local
+/facefinder/.env.test.local
+/facefinder/.env.production.local
+
+/facefinder/npm-debug.log*
+/facefinder/yarn-debug.log*
+/facefinder/yarn-error.log*
+
+/facefinder/.eslintcache
+
+
+# Facefinder API
+# dependencies
+/facefinder-api/node_modules
+/facefinder-api/.pnp
+/facefinder-api/.pnp.js
+
+# testing
+/facefinder-api/coverage
+
+# production
+/facefinder-api/build
+
+# misc
+/facefinder-api/.DS_Store
+/facefinder-api/.env.local
+/facefinder-api/.env.development.local
+/facefinder-api/.env.test.local
+/facefinder-api/.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.eslintcache
