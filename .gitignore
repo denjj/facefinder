@@ -2,28 +2,28 @@
 
 # Facefinder
 # dependencies
-/facefinder/node_modules
-/facefinder/.pnp
-/facefinder/.pnp.js
+/facefinder-client/node_modules
+/facefinder-client/.pnp
+/facefinder-client/.pnp.js
 
 # testing
-/facefinder/coverage
+/facefinder-client/coverage
 
 # production
-/facefinder/build
+/facefinder-client/build
 
 # misc
-/facefinder/.DS_Store
-/facefinder/.env.local
-/facefinder/.env.development.local
-/facefinder/.env.test.local
-/facefinder/.env.production.local
+/facefinder-client/.DS_Store
+/facefinder-client/.env.local
+/facefinder-client/.env.development.local
+/facefinder-client/.env.test.local
+/facefinder-client/.env.production.local
 
-/facefinder/npm-debug.log*
-/facefinder/yarn-debug.log*
-/facefinder/yarn-error.log*
+/facefinder-client/npm-debug.log*
+/facefinder-client/yarn-debug.log*
+/facefinder-client/yarn-error.log*
 
-/facefinder/.eslintcache
+/facefinder-client/.eslintcache
 
 
 # Facefinder API
