@@ -32,7 +32,6 @@ class Signin extends React.Component {
           this.props.onRouteChange('home');
         }
       })
-
   }
 
   onSubmitRegister = () => {
@@ -41,7 +40,6 @@ class Signin extends React.Component {
   }
   
   render() {
-
     return (
       <article className="br3 ba b--black-10 bg-near-white mv4 w-80 w-50-m w-30-l mw6 shadow-5 center">
         <main className="pa4 black-80">

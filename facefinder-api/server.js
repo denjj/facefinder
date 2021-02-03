@@ -45,7 +45,7 @@ app.get('/profile/:id', (req, res) => {
 app.post('/signin', (req, res) => {
   if (req.body.username === testDatabase.users[0].username &&
       req.body.password === testDatabase.users[0].password){
-        return res.json('success');
+        return res.json(database.users[0]);
       }
   return res.status(400).json('error logging in');
 })

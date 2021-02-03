@@ -133,8 +133,26 @@ class App extends Component {
       imageUrl: '',
       box: {},
       route: 'signin',
-      isSignedIn: false
+      isSignedIn: false,
+      user: {
+        id: '',
+        username: '',
+        entries: 0,
+        joined: ''
+      }
     }
+  }
+
+  loadUser = (data) => {
+    this.setState({
+      user: {
+        id: data.id,
+        name: data.username,
+        email: data.email,
+        entries: data.entries,
+        joined: data.joined
+      }
+    })
   }
 
   calculateFaceLocation = (data) => {
@@ -183,13 +201,13 @@ class App extends Component {
 
   switchRoute = () => {
     switch(this.state.route){
-      case 'signin': return <Signin onRouteChange={this.onRouteChange}/>;
-      case 'register': return <Register onRouteChange={this.onRouteChange}/>;
+      case 'signin': return <Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>;
+      case 'register': return <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>;
       default: return(
         <>
           <Navigation onRouteChange={this.onRouteChange}/>
           <Logo />
-          <Rank />
+          <Rank username={this.state.user.username} entries={this.state.user.entries} />
           <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
           <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl}/>
         </>
