@@ -45,7 +45,7 @@ app.get('/profile/:id', (req, res) => {
 app.post('/signin', (req, res) => {
   if (req.body.username === testDatabase.users[0].username &&
       req.body.password === testDatabase.users[0].password){
-        return res.json(database.users[0]);
+        return res.json(testDatabase.users[0]);
       }
   return res.status(400).json('error logging in');
 })
@@ -64,13 +64,17 @@ app.post('/register', (req, res) => {
 
 app.put('/image', (req, res) => {
   const { id } = req.body;
+  let found = false;
   testDatabase.users.forEach(user => {
     if (user.id === id) {
+      found = true;
       user.entries++;
       return res.json(user.entries);
     }
   });
-  return res.status(400).json('No such user exists');
+  if (!found) {
+    return res.status(400).json('No such user exists');
+  }
 })
 
 app.listen(3000, () => {
