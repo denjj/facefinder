@@ -125,22 +125,24 @@ const app = new Clarifai.App({
   apiKey: '5bf6e76d0e974dc0b06a41f66805fdb2'
  });
 
+const initialState = {
+    input: '',
+    imageUrl: '',
+    box: {},
+    route: 'signin',
+    isSignedIn: false,
+    user: {
+      id: '',
+      username: '',
+      entries: 0,
+      joined: ''
+    }
+}
+
 class App extends Component {
   constructor(){
     super();
-    this.state = {
-      input: '',
-      imageUrl: '',
-      box: {},
-      route: 'signin',
-      isSignedIn: false,
-      user: {
-        id: '',
-        username: '',
-        entries: 0,
-        joined: ''
-      }
-    }
+    this.state = initialState;
   }
 
   loadUser = (data) => {
@@ -208,7 +210,7 @@ class App extends Component {
       this.setState({isSignedIn: true});
     } else {
       //console.log("currently signed out")
-      this.setState({isSignedIn: false})
+      this.setState(initialState)
     }
   }
 
