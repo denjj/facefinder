@@ -39,6 +39,24 @@ class Signin extends React.Component {
     console.log(this.state);
     this.props.onRouteChange('register');
   }
+
+  onSubmitGuest = () => {
+    fetch('http://localhost:3000/signin', {
+      method: 'post',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        username: "Guest",
+        password: "123"
+      })
+    })
+      .then(response => response.json())
+      .then(user => {
+        if(user.id){
+          this.props.loadUser(user);
+          this.props.onRouteChange('home');
+        }
+      })
+  }
   
   render() {
     return (
@@ -64,7 +82,7 @@ class Signin extends React.Component {
               <p className="f6 link dim black db pointer" onClick={ this.onSubmitRegister }>Create an account</p>
             </div>
             <div className="lh-copy mt3">
-              <p className="f6 link dim black db pointer">Continue as guest</p>
+              <p className="f6 link dim black db pointer" onClick={ this.onSubmitGuest } >Continue as guest</p>
             </div>
           </div>
         </main>
