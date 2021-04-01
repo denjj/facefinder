@@ -36,7 +36,6 @@ class Signin extends React.Component {
   }
 
   onSubmitRegister = () => {
-    console.log(this.state);
     this.props.onRouteChange('register');
   }
 
