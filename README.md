@@ -19,6 +19,6 @@ Client
 Server
 * Clarifai API  2.9.1
 * Express  4.17.1
-* Postgres  8.5.1
+* PostgreSQL  8.5.1
 * Knex  4.17.1
 * Bcrypt-nodejs  0.0.3
