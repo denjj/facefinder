@@ -1,6 +1,6 @@
 # Facefinder
 An AI-powered face detection website.\
-Check it out at https://facefinder123.herokuapp.com/
+Check it out at https://facefinder123.herokuapp.com/ (Heroku server may take extra time to wakeup)
 
 ## Table of contents
 * [Preview](#Preview)
